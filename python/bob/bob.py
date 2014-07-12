@@ -1,11 +1,11 @@
 def hey(sentence):
-    if sentence.strip() == "":
+    if not sentence.strip():
         # Response to silence.
         return "Fine. Be that way!"
     elif sentence.isupper():
         # Response to yelling
         return "Woah, chill out!"
-    elif sentence[-1] == '?':
+    elif sentence.strip()[-1] == '?':
         # Response to a question
         return "Sure."
     # Response to anything unexpected
