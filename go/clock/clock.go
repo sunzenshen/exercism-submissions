@@ -1,6 +1,6 @@
 package clock
 
-import "strconv"
+import "fmt"
 
 // Clock holds the time in hours and minutes, but no date.
 type Clock struct {
@@ -27,16 +27,7 @@ func New(h int, m int) Clock {
 
 // String returns the string representation of the clock.
 func (c Clock) String() string {
-	disp := ""
-	if c.hour < 10 {
-		disp += "0"
-	}
-	disp = disp + strconv.Itoa(c.hour) + ":"
-	if c.minute < 10 {
-		disp += "0"
-	}
-	disp = disp + strconv.Itoa(c.minute)
-	return disp
+	return fmt.Sprintf("%02d:%02d", c.hour, c.minute)
 }
 
 // Add returns a new Clock with some minutes added to the stored time.
