@@ -1,7 +1,6 @@
 package clock
 
 import "strconv"
-import "math"
 
 // Clock holds the time in hours and minutes, but no date.
 type Clock struct {
@@ -46,5 +45,8 @@ func (c Clock) Add(a int) Clock {
 }
 
 func absInt(i int) int {
-	return int(math.Abs(float64(i)))
+	if i < 0 {
+		return -i
+	}
+	return i
 }
