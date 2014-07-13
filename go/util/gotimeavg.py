@@ -39,7 +39,9 @@ def main():
     numpy_running_times = numpy.array(running_times)
 
     print "\nMean running time: " + str(numpy.mean(numpy_running_times)) + \
-          "\nStandard Deviation: " + str(numpy.std(numpy_running_times))
+          " seconds" + \
+          "\nStandard Deviation: " + str(numpy.std(numpy_running_times)) + \
+          "\nNumber of runs: " + str(len(running_times))
 
 if __name__ == "__main__":
     main()
