@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import numpy
 import subprocess
 
 
@@ -24,8 +25,7 @@ def main():
     lines = f.readlines()
     f.close
 
-    count = 0
-    total = 0.0
+    running_times = []
     print "Golang unit test run times:\n"
 
     for line in lines:
@@ -34,10 +34,12 @@ def main():
             if len(segment) > 2 and is_number(segment[:-1]):
                 # So far, this has been the running time
                 print segment
-                count += 1
-                total += float(segment[:-1])
+                running_times.append(float(segment[:-1]))
 
-    print "\nAvg time:" + str(total/count) + "s from " + str(count) + " runs."
+    numpy_running_times = numpy.array(running_times)
+
+    print "\nMean running time: " + str(numpy.mean(numpy_running_times)) + \
+          "\nStandard Deviation: " + str(numpy.std(numpy_running_times))
 
 if __name__ == "__main__":
     main()
