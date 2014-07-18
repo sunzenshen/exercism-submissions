@@ -2,20 +2,12 @@ package diffsquares
 
 // SquareOfSums squares the sums the numbers 0...n
 func SquareOfSums(n int) int {
-	sums := 0
-	for i := n; i > 0; i-- {
-		sums += i
-	}
-	return sums * sums
+	return (n*n*n*n + 2*n*n*n + n*n) / 4
 }
 
 // SumOfSquares sums the squares of numbers 0...n
 func SumOfSquares(n int) int {
-	sums := 0
-	for i := n; i > 0; i-- {
-		sums += i * i
-	}
-	return sums
+	return n * (n + 1) * (2*n + 1) / 6
 }
 
 // Difference subtracts SumOfSquares from SquareOfSums
