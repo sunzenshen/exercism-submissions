@@ -1,6 +1,6 @@
 package leap
 
-//IsLeapYear returns whether the input year is a leap year.
+// IsLeapYear returns whether the input year is a leap year.
 func IsLeapYear(year int) bool {
 	if (year%4 == 0) && (year%100 != 0) {
 		// A leap year occurs on very year that is evenly divisible by 4
