@@ -2,17 +2,13 @@ package leap
 
 // IsLeapYear returns whether the input year is a leap year.
 func IsLeapYear(year int) bool {
-	if (year%4 == 0) && !isInvalidCentury(year) {
-		return true
-	}
-	return false
+	return isLeapNonCentury(year) || isLeapCentury(year)
 }
 
-func isInvalidCentury(year int) bool {
-	if year%100 == 0 {
-		if year%400 != 0 {
-			return true
-		}
-	}
-	return false
+func isLeapNonCentury(year int) bool {
+	return (year%4 == 0) && (year%100 != 0)
+}
+
+func isLeapCentury(year int) bool {
+	return year%400 == 0
 }
