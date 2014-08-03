@@ -2,10 +2,10 @@ package gigasecond
 
 import "time"
 
-// Gigasecond is a giga of seconds
-const Gigasecond int64 = 1e18
+// Gigasecond is 10^9 seconds
+const Gigasecond = 1e9 * time.Second
 
 // AddGigasecond returns when a gigasecond will occur after a given time
 func AddGigasecond(input time.Time) time.Time {
-	return input.Add(time.Duration(Gigasecond))
+	return input.Add(Gigasecond)
 }
