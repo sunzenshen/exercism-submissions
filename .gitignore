@@ -1,2 +1,7 @@
 .ropeproject
 *.pyc
+Makefile
+CMakeFiles
+CMakeCache.txt
+CMakeLists.txt
+*.cmake
