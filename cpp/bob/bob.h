@@ -7,14 +7,14 @@
 namespace bob {
 
     namespace {
-        bool isAllCaps(std::string const& statement) {
+        bool isShouting(std::string const& statement) {
             auto ret = false;
             auto strLen = statement.length();
-            for (auto i=0; i<strLen; ++i) {
-                if (islower(statement[i])) {
+            for (auto letter : statement) {
+                if (islower(letter)) {
                     return false;
                 }
-                if (isalpha(statement[i])){
+                if (isalpha(letter)){
                     ret = true;
                 }
             }
@@ -31,29 +31,18 @@ namespace bob {
         }
 
         std::string getTrimmedString(std::string const& statement) {
-            auto start = 0;
-            auto strLen = statement.length() - 1;
-            for ( ; start<strLen; ++start) {
-                if (statement[start] != ' ') {
-                    break;
-                }
-            }
-            auto end = strLen;
-            for ( ; end >0 ; --end) {
-                if (statement[end] != ' ') {
-                    break;
-                }
-            }
-            if (start > end) {
+            auto firstPos = statement.find_first_not_of(" ");
+            if (firstPos == std::string::npos) {
                 return "";
             }
-            return statement.substr(start, end-start+1);
+            auto lastPos = statement.find_last_not_of(" ");
+            return statement.substr(firstPos, lastPos-firstPos+1);
         }
     }
 
     std::string hey(std::string const& statement) {
         auto testStatement = getTrimmedString(statement);
-        if (isAllCaps(testStatement)) {
+        if (isShouting(testStatement)) {
             return "Woah, chill out!";
         } else if (isQuestion(testStatement)) {
             return "Sure.";
