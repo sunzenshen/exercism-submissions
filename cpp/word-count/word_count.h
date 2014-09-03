@@ -9,12 +9,6 @@
 #include <vector>
 
 namespace {
-    std::string getLowerCase(std::string phrase) {
-        auto loweredPhrase = std::string(phrase);
-        boost::to_lower(loweredPhrase);
-        return loweredPhrase;
-    }
-
     std::vector<std::string> getSeparateWords(std::string phrase) {
         std::vector<std::string> words;
         boost::split(words, phrase, boost::is_any_of(" \n"));
@@ -36,7 +30,7 @@ namespace word_count
 {
     std::map<std::string,int> words(std::string phrase) {
         std::map<std::string, int> counter;
-        auto testPhrase = getLowerCase(getStrippedPunctuation(phrase));
+        auto testPhrase = boost::to_lower_copy(getStrippedPunctuation(phrase));
         for (auto word : getSeparateWords(testPhrase)) {
             if (word.length() > 0) {
                 counter[word]++;
