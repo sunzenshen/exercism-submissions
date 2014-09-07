@@ -9,24 +9,19 @@
 namespace {
     bool isUpperCasePresent(std::string const& statement) {
         return statement.end() !=
-            std::find_if(statement.begin(), statement.end(), isalpha);
+            std::find_if(statement.begin(), statement.end(), isupper);
     }
 
     bool isLowerCasePresent(std::string const& statement) {
-        return statement.end() !=
-            std::find_if(statement.begin(), statement.end(), islower);
+        return std::any_of(statement.begin(), statement.end(), islower);
     }
 
     bool isShouting(std::string const& statement) {
-        if (isUpperCasePresent(statement) && !isLowerCasePresent(statement)) {
-            return true;
-        }
-        return false;
+        return isUpperCasePresent(statement) && !isLowerCasePresent(statement);
     }
 
     bool isQuestion(std::string const& statement) {
-        auto lastCharIndex = statement.length() - 1;
-        return statement[lastCharIndex] == '?';
+        return statement.back() == '?';
     }
 
     std::string getTrimmedString(std::string const& statement) {
@@ -46,12 +41,12 @@ namespace {
 
 namespace bob {
     std::string hey(std::string const& statement) {
-        if (isShouting(statement)) {
+        if (isSilence(statement)) {
+            return "Fine. Be that way!";
+        } else if (isShouting(statement)) {
             return "Woah, chill out!";
         } else if (isQuestion(statement)) {
             return "Sure.";
-        } else if (isSilence(statement)) {
-            return "Fine. Be that way!";
         }
         return "Whatever.";
     }
