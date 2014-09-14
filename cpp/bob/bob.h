@@ -8,8 +8,7 @@
 
 namespace {
     bool isUpperCasePresent(std::string const& statement) {
-        return statement.end() !=
-            std::find_if(statement.begin(), statement.end(), isupper);
+        return std::any_of(statement.begin(), statement.end(), isupper);
     }
 
     bool isLowerCasePresent(std::string const& statement) {
