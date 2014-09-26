@@ -5,8 +5,9 @@ def hey(sentence):
     elif sentence.isupper():
         # Response to yelling
         return "Woah, chill out!"
-    elif sentence.strip()[-1] == '?':
+    elif sentence.strip().endswith('?'):
         # Response to a question
         return "Sure."
-    # Response to anything unexpected
-    return "Whatever."
+    else:
+        # Response to anything unexpected
+        return "Whatever."
