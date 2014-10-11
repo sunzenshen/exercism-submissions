@@ -1,6 +1,8 @@
 def hey(sentence):
-    if not sentence.strip():
+    if not sentence.strip().strip('.?!'):
         # Response to silence.
+        # First strip: whitespace removal
+        # Second strip: punctuation only, eg: "..."
         return "Fine. Be that way!"
     elif sentence.isupper():
         # Response to yelling
