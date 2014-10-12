@@ -5,7 +5,7 @@ using namespace std;
 
 namespace hamming {
 
-unsigned compute(string a, string b) {
+unsigned compute(const string& a, const string& b) {
   unsigned distance = 0;
   unsigned compareLen = 0;
   compareLen = min(a.length(), b.length());

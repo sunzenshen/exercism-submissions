@@ -5,7 +5,7 @@
 
 namespace hamming {
 
-unsigned compute(std::string a, std::string b);
+unsigned compute(const std::string& a, const std::string& b);
 
 }
 
