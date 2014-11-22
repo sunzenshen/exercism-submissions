@@ -1,13 +1,11 @@
 #include "food_chain.h"
 
-using namespace std;
-
 namespace food_chain {
 
 struct animal_entry {
-  string animal;
-  string remark;
-  string why;
+  std::string animal;
+  std::string remark;
+  std::string why;
 };
 
 animal_entry animal_roster[] = {
@@ -53,14 +51,14 @@ animal_entry animal_roster[] = {
   }
 };
 
-string verse(unsigned verse_num) {
+std::string verse(unsigned verse_num) {
   int i = verse_num - 1;
 
-  string ret = "I know an old lady who swallowed a " +
-               animal_roster[i].animal +
-               ".\n" +
-               animal_roster[i].remark +
-               animal_roster[i].why;
+  std::string ret = "I know an old lady who swallowed a " +
+                    animal_roster[i].animal +
+                    ".\n" +
+                    animal_roster[i].remark +
+                    animal_roster[i].why;
 
   if (i < 7) {
     for (--i; i>=0; --i) {
@@ -72,7 +70,7 @@ string verse(unsigned verse_num) {
 }
 
 std::string verses(unsigned start_verse, unsigned end_verse) {
-  string ret;
+  std::string ret;
 
   for (unsigned i=start_verse; i<=end_verse; ++i) {
       ret = ret + verse(i) + "\n";
