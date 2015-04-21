@@ -5,7 +5,7 @@ using namespace std;
 
 namespace dna {
 
-counter::counter(string sequence) : _sequence(sequence) {
+counter::counter(const string& sequence) {
   _nucleotide_counts['A']= 0;
   _nucleotide_counts['T']= 0;
   _nucleotide_counts['C']= 0;

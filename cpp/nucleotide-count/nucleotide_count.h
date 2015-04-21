@@ -9,7 +9,7 @@ namespace dna {
 class counter {
 public:
   counter() {};
-  counter(std::string sequence);
+  explicit counter(const std::string& sequence);
   unsigned count(char nucleotide) const;
   std::map<char,int> nucleotide_counts() const;
 private:
