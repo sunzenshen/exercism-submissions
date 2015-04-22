@@ -13,7 +13,6 @@ public:
   unsigned count(char nucleotide) const;
   std::map<char,int> nucleotide_counts() const;
 private:
-  std::string _sequence;
   std::map<char, int> _nucleotide_counts;
 };
 
