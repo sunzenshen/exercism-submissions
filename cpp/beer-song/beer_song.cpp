@@ -4,8 +4,8 @@ using namespace std;
 
 namespace beer {
 
-string verse(unsigned num_bottles) {
-  unsigned one_less = num_bottles - 1;
+string verse(size_t num_bottles) {
+  size_t one_less = num_bottles - 1;
   string ret;
 
   if (num_bottles > 2) {
@@ -26,16 +26,12 @@ string verse(unsigned num_bottles) {
   return ret;
 }
 
-string sing(unsigned starting_num, unsigned ending_num) {
+string sing(size_t starting_num, size_t ending_num) {
   string rest_of_verses;
   if (starting_num > ending_num) {
     rest_of_verses = "\n" + sing(starting_num-1, ending_num);
   }
   return verse(starting_num) + rest_of_verses;
-}
-
-string sing(unsigned starting_num) {
-  return sing(starting_num, 0);
 }
 
 }
