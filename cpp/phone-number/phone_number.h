@@ -7,6 +7,7 @@ class phone_number {
 
 public:
   phone_number(std::string textFormatNumber);
+  const std::string number() const;
 
 };
 
