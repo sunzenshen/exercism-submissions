@@ -19,3 +19,8 @@ phone_number::phone_number(string textFormatNumber) {
 const string phone_number::number() const {
   return _phone_number;
 }
+
+const string phone_number::area_code() const {
+  // stub
+  return "";
+}

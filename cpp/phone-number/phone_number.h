@@ -8,6 +8,7 @@ class phone_number {
 public:
   phone_number(std::string textFormatNumber);
   const std::string number() const;
+  const std::string area_code() const;
 
 private:
   std::string _phone_number;
