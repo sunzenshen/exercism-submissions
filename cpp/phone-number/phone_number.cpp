@@ -11,6 +11,8 @@ phone_number::phone_number(string textFormatNumber) {
   // Call is possibly a long distance number
   if ((_phone_number.length() == 11) && (_phone_number[0] == '1')) {
     _phone_number = _phone_number.substr(1);
+  } else if (_phone_number.length() != 10) {
+    _phone_number = "0000000000";
   }
 }
 
