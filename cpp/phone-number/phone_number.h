@@ -9,6 +9,8 @@ public:
   phone_number(std::string textFormatNumber);
   const std::string number() const;
 
+private:
+  std::string _phone_number;
 };
 
 #endif
