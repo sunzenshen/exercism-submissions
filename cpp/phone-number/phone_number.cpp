@@ -21,6 +21,8 @@ const string phone_number::number() const {
 }
 
 const string phone_number::area_code() const {
-  // stub
-  return "";
+  if (_phone_number.length() >= 3) {
+    return _phone_number.substr(0, 3);
+  }
+  return "Can't determine area code, unexpected phone number: " + _phone_number;
 }
