@@ -16,6 +16,8 @@ class school
 public:
   void add(std::string const& name, int grade);
 
+  Students grade(int grade) const;
+
   const Roster& roster() const;
 
 private:

@@ -10,6 +10,15 @@ void school::add(string const& name, int grade) {
   grade_roster.push_back(name);
 }
 
+Students school::grade(int grade) const {
+  auto it = roster_.find(grade);
+  if (it != roster_.end()) {
+    return it->second;
+  } else {
+     return Students();
+  }
+}
+
 const Roster& school::roster() const {
   return roster_;
 }

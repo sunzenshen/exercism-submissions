@@ -56,7 +56,6 @@ BOOST_AUTO_TEST_CASE(adding_a_student_adds_them_to_the_roster_for_the_given_grad
     REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(adding_more_students_to_the_same_grade_adds_them_to_the_roster)
 {
     school_.add("Blair", 2);
@@ -91,6 +90,7 @@ BOOST_AUTO_TEST_CASE(grade_returns_the_students_in_that_grade_in_alphabetical_or
     const vector<string> expected{"Bradley", "Franklin"};
     REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 
 BOOST_AUTO_TEST_CASE(grade_returns_an_empty_array_if_there_are_no_students_in_that_grade)
 {
