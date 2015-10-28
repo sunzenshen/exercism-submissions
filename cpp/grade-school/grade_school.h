@@ -2,20 +2,24 @@
 #define _GRADE_SCHOOL_H
 
 #include "map"
+#include "string"
 #include "vector"
 
 namespace grade_school
 {
 
+typedef std::vector<std::string> Students;
+typedef std::map<int, Students> Roster;
+
 class school
 {
 public:
-  const std::map<int, std::vector<std::string> >& roster() const {
-    return roster_;
-  }
+  void add(std::string const& name, int grade);
+
+  const Roster& roster() const;
 
 private:
-  std::map<int, std::vector<std::string> > roster_;
+  Roster roster_;
 }; // end class school
 
 } // end namespace grade_school
