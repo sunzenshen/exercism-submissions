@@ -15,9 +15,11 @@ void school::add(string const& name, int grade) {
 Students school::grade(int grade) const {
   auto it = roster_.find(grade);
   if (it != roster_.end()) {
+    // The grade's list of students
     return it->second;
   } else {
-     return Students();
+    // This grade doesn't exist, so the list is empty
+    return Students();
   }
 }
 

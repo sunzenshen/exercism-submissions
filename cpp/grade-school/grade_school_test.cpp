@@ -90,7 +90,6 @@ BOOST_AUTO_TEST_CASE(grade_returns_the_students_in_that_grade_in_alphabetical_or
     const vector<string> expected{"Bradley", "Franklin"};
     REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
-#if defined(EXERCISM_RUN_ALL_TESTS)
 
 BOOST_AUTO_TEST_CASE(grade_returns_an_empty_array_if_there_are_no_students_in_that_grade)
 {
@@ -115,6 +114,5 @@ BOOST_AUTO_TEST_CASE(the_student_names_in_each_grade_in_the_roster_are_sorted)
         };
     REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
-#endif
 
 BOOST_AUTO_TEST_SUITE_END();
