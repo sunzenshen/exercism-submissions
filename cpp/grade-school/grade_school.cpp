@@ -7,7 +7,9 @@ namespace grade_school
 
 void school::add(string const& name, int grade) {
   auto& grade_roster = roster_[grade];
-  grade_roster.push_back(name);
+  // Insert student into a grade's roster, maintaining alphabetical order
+  auto it = std::lower_bound(grade_roster.begin(), grade_roster.end(), name);
+  grade_roster.insert(it, name);
 }
 
 Students school::grade(int grade) const {
