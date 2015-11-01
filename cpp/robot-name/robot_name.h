@@ -6,8 +6,11 @@ namespace robot_name
 
 class robot
 {
+public:
+  robot();
 }; // end class robot
 
 } // end namespace robot_name
 
 #endif
+
