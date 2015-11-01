@@ -33,8 +33,10 @@ string robot::generate_name() const {
 }
 
 char robot::rand_prefix() const {
-  char prefixes[] = "ABCDEFGHIJKLMNOPQRSTUNWXYZ";
-  return prefixes[rand() % sizeof(prefixes)];
+  const char prefixes[] = "ABCDEFGHIJKLMNOPQRSTUNWXYZ";
+  // -1: Do not grab null termination character as a prefix value
+  const size_t num_prefix_candidates = sizeof(prefixes) - 1;
+  return prefixes[rand() % num_prefix_candidates];
 }
 
 int robot::rand_digit() const {
