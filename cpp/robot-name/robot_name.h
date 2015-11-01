@@ -10,9 +10,12 @@ namespace robot_name
 class robot
 {
 public:
+  // Generates a robot name on construction
   robot();
-
+  // Get the robot's name
   std::string name() const { return name_; }
+  // Resets the robot's name
+  void reset();
 
 private:
   // Name of individual robot

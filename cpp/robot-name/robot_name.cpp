@@ -12,6 +12,12 @@ robot::robot() {
   name_ = generate_name();
 }
 
+void robot::reset() {
+  // Not intending to recycle previously used names,
+  // so no need to update names_used_ at this point.
+  name_ = generate_name();
+}
+
 string robot::generate_name() const {
   string candidate_name = "PR070"; // "PROTO" as the first robot name
   // Search for unused name
