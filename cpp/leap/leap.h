@@ -4,7 +4,7 @@
 namespace leap
 {
 
-bool is_leap_year(int year) {return true;}
+bool is_leap_year(int year) {return year % 4 == 0;}
 
 } // end namespace leap
 
