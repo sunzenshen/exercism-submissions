@@ -14,7 +14,7 @@ namespace leap
 {
 
 bool is_leap_year(int year) {
-  return is_divisible(year, 4);
+  return is_divisible(year, 4) && !is_divisible(year, 100);
 }
 
 } // end namespace leap
