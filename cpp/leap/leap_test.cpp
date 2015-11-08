@@ -22,9 +22,7 @@ BOOST_AUTO_TEST_CASE(turn_of_the_21st_century)
     BOOST_REQUIRE(leap::is_leap_year(2000));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(turn_of_the_25th_century)
 {
     BOOST_REQUIRE(leap::is_leap_year(2400));;
 }
-#endif
