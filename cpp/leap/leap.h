@@ -16,13 +16,17 @@ bool is_century(int year) {
   return is_divisible(year, 100);
 }
 
+bool is_century_leap_year(int year) {
+  return is_divisible(year, 400);
+}
+
 }
 
 namespace leap
 {
 
 bool is_leap_year(int year) {
-  return is_doubly_even(year) && !is_century(year);
+  return is_century_leap_year(year) || (is_doubly_even(year) && !is_century(year));
 }
 
 } // end namespace leap
