@@ -4,6 +4,11 @@
 namespace space_age
 {
 
+class space_age
+{
+
+}; // end class space_age
+
 } // end namespace space_age
 
 #endif
