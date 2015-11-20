@@ -9,6 +9,8 @@ class space_age
 public:
   space_age(unsigned int age_in_seconds) : age_in_seconds_(age_in_seconds) {}
 
+  unsigned int seconds() const {return age_in_seconds_;}
+
 private:
   unsigned int age_in_seconds_;
 }; // end class space_age
