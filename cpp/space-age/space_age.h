@@ -11,7 +11,7 @@ public:
 
   unsigned int seconds() const {return age_in_seconds_;}
 
-  double on_earth() const {return 31.69;}
+  double on_earth() const;
 
 private:
   unsigned int age_in_seconds_;
