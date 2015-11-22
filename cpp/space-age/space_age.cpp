@@ -7,6 +7,7 @@ namespace
   const double VENUS_ORBITAL_PERIOD_VS_EARTH = 0.61519726;
   const double MARS_ORBITAL_PERIOD_VS_EARTH = 1.8808158;
   const double JUPITER_ORBITAL_PERIOD_VS_EARTH = 11.862615;
+  const double SATURN_ORBITAL_PERIOD_VS_EARTH = 29.447498;
 }
 
 namespace space_age
@@ -35,6 +36,11 @@ double space_age::on_mars() const
 double space_age::on_jupiter() const
 {
   return on_earth() / JUPITER_ORBITAL_PERIOD_VS_EARTH;
+}
+
+double space_age::on_saturn() const
+{
+  return on_earth() / SATURN_ORBITAL_PERIOD_VS_EARTH;
 }
 
 } // end namespace space_age

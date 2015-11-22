@@ -54,7 +54,6 @@ BOOST_AUTO_TEST_CASE(age_in_jupiter_years)
     BOOST_REQUIRE_LT(std::abs(2.41 - age.on_jupiter()), accuracy);
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(age_in_saturn_years)
 {
     const space_age::space_age age(3000000000);
@@ -63,6 +62,7 @@ BOOST_AUTO_TEST_CASE(age_in_saturn_years)
     BOOST_REQUIRE_LT(std::abs(3.23 - age.on_saturn()), accuracy);
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(age_in_uranus_years)
 {
     const space_age::space_age age(3210123456);
