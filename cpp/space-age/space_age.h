@@ -14,6 +14,7 @@ public:
   double on_earth() const;
   double on_mercury() const;
   double on_venus() const;
+  double on_mars() const;
 
 private:
   unsigned int age_in_seconds_;
