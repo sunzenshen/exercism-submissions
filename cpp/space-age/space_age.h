@@ -7,10 +7,13 @@ namespace space_age
 class space_age
 {
 public:
+  // Input age in seconds
   space_age(long age_in_seconds) : age_in_seconds_(age_in_seconds) {}
 
+  // Age in seconds
   long seconds() const {return age_in_seconds_;}
 
+  // Age in "years" for the following planets:
   double on_earth() const;
   double on_mercury() const;
   double on_venus() const;
