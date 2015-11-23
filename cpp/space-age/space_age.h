@@ -7,9 +7,9 @@ namespace space_age
 class space_age
 {
 public:
-  space_age(unsigned int age_in_seconds) : age_in_seconds_(age_in_seconds) {}
+  space_age(long age_in_seconds) : age_in_seconds_(age_in_seconds) {}
 
-  unsigned int seconds() const {return age_in_seconds_;}
+  long seconds() const {return age_in_seconds_;}
 
   double on_earth() const;
   double on_mercury() const;
@@ -18,9 +18,10 @@ public:
   double on_jupiter() const;
   double on_saturn() const;
   double on_uranus() const;
+  double on_neptune() const;
 
 private:
-  unsigned int age_in_seconds_;
+  long age_in_seconds_;
 }; // end class space_age
 
 } // end namespace space_age
