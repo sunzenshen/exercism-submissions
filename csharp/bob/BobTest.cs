@@ -27,14 +27,12 @@ public class BobTest
         Assert.That(Bob.Hey("Do I like my  spacebar  too much?  "), Is.EqualTo("Sure."));
     }
 
-    [Ignore]
     [Test]
     public void Asking_a_numeric_question ()
     {
         Assert.That(Bob.Hey("You are, what, like 15?"), Is.EqualTo("Sure."));
     }
 
-    [Ignore]
     [Test]
     public void Talking_forcefully ()
     {
