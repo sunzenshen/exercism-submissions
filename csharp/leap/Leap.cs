@@ -2,7 +2,7 @@
 {
 	public static bool IsLeap(int year)
 	{
-		return IsDoublyEven(year) && !IsCentury(year);
+		return IsCenturyLeapYear(year) || IsDoublyEven(year) && !IsCentury(year);
 	}
 
 	private static bool IsDivisible(int numerator, int divisor)
@@ -18,5 +18,10 @@
 	private static bool IsCentury(int year)
 	{
 		return IsDivisible(year, 100);
+	}
+
+	private static bool IsCenturyLeapYear(int year)
+	{
+		return IsDivisible(year, 400);
 	}
 }
