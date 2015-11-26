@@ -40,5 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BobTest.cs" />
+    <Compile Include="Bob.cs" />
   </ItemGroup>
 </Project>
