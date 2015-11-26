@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leap", "leap\leap.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bob", "bob\bob.csproj", "{F8CED0E9-8251-4DA8-BC5F-A7AAA8CE470D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "etl", "etl\etl.csproj", "{E41B2079-0BA9-43B6-A8E6-6B9F5794D2CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AF320413-341B-4829-831F-3361CA7ED504}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF320413-341B-4829-831F-3361CA7ED504}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF320413-341B-4829-831F-3361CA7ED504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41B2079-0BA9-43B6-A8E6-6B9F5794D2CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41B2079-0BA9-43B6-A8E6-6B9F5794D2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41B2079-0BA9-43B6-A8E6-6B9F5794D2CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41B2079-0BA9-43B6-A8E6-6B9F5794D2CE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F8CED0E9-8251-4DA8-BC5F-A7AAA8CE470D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F8CED0E9-8251-4DA8-BC5F-A7AAA8CE470D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8CED0E9-8251-4DA8-BC5F-A7AAA8CE470D}.Release|Any CPU.ActiveCfg = Release|Any CPU
