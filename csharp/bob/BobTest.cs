@@ -15,7 +15,6 @@ public class BobTest
         Assert.That(Bob.Hey("WATCH OUT!"), Is.EqualTo("Whoa, chill out!"));
     }
 
-    [Ignore]
     [Test]
     public void Asking_a_question ()
     {
