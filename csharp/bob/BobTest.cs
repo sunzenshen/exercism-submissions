@@ -99,14 +99,12 @@ public class BobTest
         Assert.That(Bob.Hey(""), Is.EqualTo("Fine. Be that way!"));
     }
 
-    [Ignore]
     [Test]
     public void Prolonged_silence ()
     {
         Assert.That(Bob.Hey("    "), Is.EqualTo("Fine. Be that way!"));
     }
 
-    [Ignore]
     [Test]
     public void Multiple_line_question ()
     {
