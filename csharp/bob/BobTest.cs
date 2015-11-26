@@ -21,7 +21,6 @@ public class BobTest
         Assert.That(Bob.Hey("Does this cryogenic chamber make me look fat?"), Is.EqualTo("Sure."));
     }
 
-    [Ignore]
     [Test]
     public void Asking_a_question_with_a_trailing_space()
     {
