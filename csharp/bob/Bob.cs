@@ -5,7 +5,9 @@
 		// Trim whitespace
 		greeting = greeting.Trim ();
 		// Determine Bob's response
-		if (AreAllAlphaUpper (greeting)) {
+		if (greeting.Length == 0) { // silence
+			return "Fine. Be that way!";
+		} else if (AreAllAlphaUpper (greeting)) {
 			return "Whoa, chill out!";
 		} else if (greeting.EndsWith ("?")) {
 			return "Sure.";

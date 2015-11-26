@@ -81,21 +81,18 @@ public class BobTest
         Assert.That(Bob.Hey("I HATE YOU"), Is.EqualTo("Whoa, chill out!"));
     }
 
-    [Ignore]
     [Test]
     public void Statement_containing_question_mark ()
     {
         Assert.That(Bob.Hey("Ending with ? means a question."), Is.EqualTo("Whatever."));
     }
 
-    [Ignore]
     [Test]
     public void Prattling_on ()
     {
         Assert.That(Bob.Hey("Wait! Hang on. Are you going to be OK?"), Is.EqualTo("Sure."));
     }
 
-    [Ignore]
     [Test]
     public void Silence ()
     {
