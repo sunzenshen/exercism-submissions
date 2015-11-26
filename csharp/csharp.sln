@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leap", "leap\leap.csproj", "{AF320413-341B-4829-831F-3361CA7ED504}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bob", "bob\bob.csproj", "{F8CED0E9-8251-4DA8-BC5F-A7AAA8CE470D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{AF320413-341B-4829-831F-3361CA7ED504}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF320413-341B-4829-831F-3361CA7ED504}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF320413-341B-4829-831F-3361CA7ED504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8CED0E9-8251-4DA8-BC5F-A7AAA8CE470D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8CED0E9-8251-4DA8-BC5F-A7AAA8CE470D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8CED0E9-8251-4DA8-BC5F-A7AAA8CE470D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8CED0E9-8251-4DA8-BC5F-A7AAA8CE470D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

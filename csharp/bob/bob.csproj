@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AF320413-341B-4829-831F-3361CA7ED504}</ProjectGuid>
+    <ProjectGuid>{F8CED0E9-8251-4DA8-BC5F-A7AAA8CE470D}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>leap</RootNamespace>
-    <AssemblyName>leap</AssemblyName>
+    <RootNamespace>bob</RootNamespace>
+    <AssemblyName>bob</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -36,10 +36,5 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Leap.cs" />
-    <Compile Include="LeapTest.cs" />
   </ItemGroup>
 </Project>
