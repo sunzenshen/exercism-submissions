@@ -51,21 +51,18 @@ public class BobTest
         Assert.That(Bob.Hey("WHAT THE HELL WERE YOU THINKING?"), Is.EqualTo("Whoa, chill out!"));
     }
 
-    [Ignore]
     [Test]
     public void Shouting_numbers ()
     {
         Assert.That(Bob.Hey("1, 2, 3 GO!"), Is.EqualTo("Whoa, chill out!"));
     }
 
-    [Ignore]
     [Test]
     public void Only_numbers ()
     {
         Assert.That(Bob.Hey("1, 2, 3"), Is.EqualTo("Whatever."));
     }
 
-    [Ignore]
     [Test]
     public void Question_with_only_numbers ()
     {
