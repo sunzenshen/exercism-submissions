@@ -12,7 +12,6 @@ public class ETLTest
         Assert.That(ETL.Transform(old), Is.EqualTo(expected));
     }
 
-    [Ignore]
     [Test]
     public void Transforms_multiple_values()
     {
@@ -21,7 +20,6 @@ public class ETLTest
         Assert.That(ETL.Transform(old), Is.EqualTo(expected));
     }
 
-    [Ignore]
     [Test]
     public void Transforms_multiple_keys()
     {
@@ -30,7 +28,6 @@ public class ETLTest
         Assert.That(ETL.Transform(old), Is.EqualTo(expected));
     }
 
-    [Ignore]
     [Test]
     public void Transforms_a_full_dataset()
     {
