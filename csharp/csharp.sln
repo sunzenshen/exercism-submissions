@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bob", "bob\bob.csproj", "{F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "etl", "etl\etl.csproj", "{E41B2079-0BA9-43B6-A8E6-6B9F5794D2CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "anagram", "anagram\anagram.csproj", "{B88915E7-0CE8-40B0-91D4-AE4DECB64E73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{AF320413-341B-4829-831F-3361CA7ED504}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF320413-341B-4829-831F-3361CA7ED504}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF320413-341B-4829-831F-3361CA7ED504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B88915E7-0CE8-40B0-91D4-AE4DECB64E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B88915E7-0CE8-40B0-91D4-AE4DECB64E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B88915E7-0CE8-40B0-91D4-AE4DECB64E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B88915E7-0CE8-40B0-91D4-AE4DECB64E73}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E41B2079-0BA9-43B6-A8E6-6B9F5794D2CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E41B2079-0BA9-43B6-A8E6-6B9F5794D2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E41B2079-0BA9-43B6-A8E6-6B9F5794D2CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
