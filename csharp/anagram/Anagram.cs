@@ -5,10 +5,13 @@ public class Anagram
 {
 	// Alphabetically sorted version of original phrase for letter set matching
 	private string key_;
+	// Original phrase for checking self identity of anagram candidate
+	private string phrase_;
 
-	// Constructor stores alphabetized key of original phrase
+	// Constructor stores alphabetized key and original phrase
 	public Anagram (string phrase) {
 		key_ = CreateKey (phrase);
+		phrase_ = phrase;
 	}
 
 	// Of a set of input words,
@@ -23,9 +26,13 @@ public class Anagram
 		return matches.ToArray();
 	}
 
-	// Checks the candidate phrase against the stored key
+	// Checks the candidate phrase against the stored key and original phrase
 	private bool IsAnagram (string candidate) {
 		var ret = true;
+		if (phrase_ == candidate) {
+			// A word cannot be an anagram of its identical self
+			ret = false;
+		}
 		if (key_ != CreateKey (candidate)) {
 			// Set of letters don't match for anagram
 			ret = false;
