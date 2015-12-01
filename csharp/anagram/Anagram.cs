@@ -11,7 +11,7 @@ public class Anagram
 	// Constructor stores alphabetized key and original phrase
 	public Anagram (string phrase) {
 		key_ = CreateKey (phrase);
-		phrase_ = phrase;
+		phrase_ = phrase.ToLower();
 	}
 
 	// Of a set of input words,
@@ -19,7 +19,7 @@ public class Anagram
 	public string[] Match (string[] words) {
 		var matches = new List<string> ();
 		foreach (var word in words) {
-			if (IsAnagram(word)) {
+			if (IsAnagram(word.ToLower())) {
 				matches.Add(word);
 			}
 		}
@@ -27,6 +27,7 @@ public class Anagram
 	}
 
 	// Checks the candidate phrase against the stored key and original phrase
+	// Assumes candidate phrase is all lower case
 	private bool IsAnagram (string candidate) {
 		var ret = true;
 		if (phrase_ == candidate) {
@@ -44,7 +45,7 @@ public class Anagram
 	// for comparisons between potential anagrams
 	private static string CreateKey (string phrase) {
 		// Assuming ASCII characters (no extended Unicode)
-		var arrayToSort = phrase.ToCharArray ();
+		var arrayToSort = phrase.ToLower().ToCharArray ();
 		Array.Sort (arrayToSort);
 		return new string (arrayToSort);
 	}
