@@ -23,9 +23,9 @@
 	{
 		bool isUpperSeen = false;
 		int strlen = str.Length;
-		for (int i = 0; i < strlen; ++i) {
-			if (char.IsLetter (str [i])) {
-				bool isCurrentCharUpper = char.IsUpper (str [i]);
+		foreach (char letter in str) {
+			if (char.IsLetter (letter)) {
+				bool isCurrentCharUpper = char.IsUpper (letter);
 				if (!isCurrentCharUpper) {
 					return false; // Not all alphabetical characters are upper case
 				}
