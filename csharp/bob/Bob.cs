@@ -2,6 +2,10 @@
 {
 	public static string Hey(string greeting)
 	{
+		if (greeting == null) {
+			throw new System.ArgumentException("Parameter in Bob::Hey() cannot be null", "greeting");;
+		}
+
 		// Trim whitespace
 		greeting = greeting.Trim ();
 		// Determine Bob's response
