@@ -11,7 +11,7 @@
 		// Determine Bob's response
 		if (greeting.Length == 0) {               // silence
 			return "Fine. Be that way!";
-		} else if (AreAllAlphaUpper (greeting)) { // yelling
+		} else if (IsYelling (greeting)) {        // yelling
 			return "Whoa, chill out!";
 		} else if (greeting.EndsWith ("?")) {     // question
 			return "Sure.";
@@ -19,23 +19,17 @@
 		return "Whatever.";
 	}
 
-	private static bool AreAllAlphaUpper(string str)
+	private static bool IsYelling(string str)
 	{
-		bool isUpperSeen = false;
-		int strlen = str.Length;
-		foreach (char letter in str) {
-			if (char.IsLetter (letter)) {
-				bool isCurrentCharUpper = char.IsUpper (letter);
-				if (!isCurrentCharUpper) {
-					return false; // Not all alphabetical characters are upper case
-				}
-				// Check if we've seen an upper case character before
-				if (isCurrentCharUpper) {
-					isUpperSeen = true;
-				}
-			}
+		if (str.ToLower () == str) {
+			// letters are all lower case, doesn't count as yelling
+			return false;
+		} else if (str.ToUpper () == str) {
+			// ALL UPPER CASE LETTERS INDICATE YELLING
+			return true;
+		} else {
+			// A mixture of UPPER and lower casing not considered yelling
+			return false;
 		}
-		// There are alphabetical characters which are all upper case
-		return isUpperSeen;
 	}
 }
