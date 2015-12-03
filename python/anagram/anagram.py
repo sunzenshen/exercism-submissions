@@ -9,6 +9,9 @@ def detect_anagrams(target, candidates):
 
 def is_anagram(target, candidate):
     """ Returns true if the candidate string is an anagram of the target """
+    # Normalize casing of the two strings
+    target = target.lower()
+    candidate = candidate.lower()
     if target == candidate:
         # Identical strings are not anagrams of each other
         return False
