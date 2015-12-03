@@ -13,4 +13,6 @@ def verse(num_bottles):
         return ("2 bottles of beer on the wall, 2 bottles of beer.\n"
                 "Take one down and pass it around, 1 bottle of beer on the wall.\n")
     else:
-        return ""
+        return ("%d bottles of beer on the wall, %d bottles of beer.\n"
+                "Take one down and pass it around, %d bottles of beer on the wall.\n"
+                ) % (num_bottles, num_bottles, num_bottles-1)
