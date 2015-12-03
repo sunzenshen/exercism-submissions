@@ -1,5 +1,13 @@
 def song(start_num, end_num=0):
-    return ""
+    """ Sing the verses of the beer song from range start to end. """
+    assert(start_num >= 0) # I guess negative beer involves upchucking
+    current_verse = verse(start_num) + "\n"
+    if start_num > 0 and start_num > end_num:
+        # Fetch the other verses of the song and return the appended results
+        return current_verse + song(start_num-1, end_num)
+    else:
+        # This is the final verse being sung
+        return current_verse
 
 def verse(num_bottles):
     """ Recite the n-th verse of the beer song. """
