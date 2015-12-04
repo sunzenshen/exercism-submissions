@@ -15,6 +15,8 @@ func Detect(target string, candidates []string) []string {
 }
 
 func areAnagrams(a, b string) bool {
+	a = strings.ToLower(a)
+	b = strings.ToLower(b)
 	if sortedByRune(a) != sortedByRune(b) {
 		// Letter counts do not match for anagram candidates
 		return false
