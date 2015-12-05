@@ -10,6 +10,9 @@ func Hey(speech string) string {
 	if (speech == strings.ToUpper(speech)) && (speech != strings.ToLower(speech)) {
 		// Yelling
 		return "Whoa, chill out!"
+	} else if strings.HasSuffix(speech, "?") {
+		// Question
+		return "Sure."
 	}
 	return "Whatever."
 }
