@@ -4,14 +4,14 @@ using System.Collections.Generic;
 public class Anagram
 {
 	// Alphabetically sorted version of original phrase for letter set matching
-	private string key_;
+	private string _key;
 	// Original phrase for checking self identity of anagram candidate
-	private string phrase_;
+	private string _phrase;
 
 	// Constructor stores alphabetized key and original phrase
 	public Anagram (string phrase) {
-		key_ = CreateKey (phrase);
-		phrase_ = phrase.ToLower();
+		_key = CreateKey (phrase);
+		_phrase = phrase.ToLower();
 	}
 
 	// Of a set of input words,
@@ -30,11 +30,11 @@ public class Anagram
 	// Assumes candidate phrase is all lower case
 	private bool IsAnagram (string candidate) {
 		var ret = true;
-		if (phrase_ == candidate) {
+		if (_phrase == candidate) {
 			// A word cannot be an anagram of its identical self
 			ret = false;
 		}
-		if (key_ != CreateKey (candidate)) {
+		if (_key != CreateKey (candidate)) {
 			// Set of letters don't match for anagram
 			ret = false;
 		}
