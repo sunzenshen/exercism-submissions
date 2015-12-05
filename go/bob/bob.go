@@ -13,6 +13,9 @@ func Hey(speech string) string {
 	} else if strings.HasSuffix(speech, "?") {
 		// Question
 		return "Sure."
+	} else if len(speech) == 0 {
+		// Silence
+		return "Fine. Be that way!"
 	}
 	return "Whatever."
 }
