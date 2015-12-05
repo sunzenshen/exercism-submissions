@@ -1,5 +1,7 @@
 package allergies
 
+import "sort"
+
 var allergenMap = map[string]int{
 	"eggs":         1,
 	"peanuts":      2,
@@ -19,6 +21,8 @@ func Allergies(score int) []string {
 			allergens = append(allergens, allergen)
 		}
 	}
+	// Need to list allergens in order of scores to pass exercism tests
+	sort.Sort(byScore(allergens))
 	return allergens
 }
 
@@ -26,3 +30,15 @@ func Allergies(score int) []string {
 func AllergicTo(score int, allergen string) bool {
 	return (score & allergenMap[allergen]) > 0
 }
+
+// For sorting the allergens list by their scores
+type byScore []string
+
+// Len of list of allergens is number of entries as usual
+func (a byScore) Len() int { return len(a) }
+
+// Swap of allergen elements is also a simple index swap
+func (a byScore) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
+
+// Less comparison of allergen elements performs a lookup in the allergenMap
+func (a byScore) Less(i, j int) bool { return allergenMap[a[i]] < allergenMap[a[j]] }
