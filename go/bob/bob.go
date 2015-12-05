@@ -1,5 +1,9 @@
-// +build !example
+package bob
 
-package bob // package name must match the package name in bob_test.go
+// TestVersion defines which exercism test set to run on this implementation
+const TestVersion = 1
 
-const TestVersion = 1 // same with TestVersion
+// Hey determines the reaction Bob has to a given greeting.
+func Hey(speech string) string {
+	return "Whatever."
+}
