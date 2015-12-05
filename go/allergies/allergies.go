@@ -14,6 +14,11 @@ var allergenMap = map[string]int{
 // Allergies takes a score and returns all allergies included.
 func Allergies(score int) []string {
 	var allergens []string
+	for allergen, bitValue := range allergenMap {
+		if score&bitValue > 0 {
+			allergens = append(allergens, allergen)
+		}
+	}
 	return allergens
 }
 
