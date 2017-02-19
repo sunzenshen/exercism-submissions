@@ -12,7 +12,7 @@ class chess_board
 {
 public:
   chess_board() {}
-  chess_board(coordinate white, coordinate black);
+  chess_board(const coordinate& white, const coordinate& black);
 
   coordinate black() const { return m_black; }
   coordinate white() const { return m_white; }
