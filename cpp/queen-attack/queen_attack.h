@@ -30,7 +30,8 @@ private:
   const coordinate m_black = std::make_pair(7, 3);
   const coordinate m_white = std::make_pair(0, 3);
 
-  bool same_column() const;
+  int column(const coordinate& coord) const {return coord.second;}
+  bool same_column() const { return column(m_white) == column(m_black); }
 
 };
 
