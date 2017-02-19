@@ -25,26 +25,7 @@ public:
   coordinate black() const { return m_black; }
   coordinate white() const { return m_white; }
 
-  operator std::string() const
-  {
-    std::string print_board =
-      "_ _ _ _ _ _ _ _\n"
-      "_ _ _ _ _ _ _ _\n"
-      "_ _ _ _ _ _ _ _\n"
-      "_ _ _ _ _ _ _ _\n"
-      "_ _ _ _ _ _ _ _\n"
-      "_ _ _ _ _ _ _ _\n"
-      "_ _ _ _ _ _ _ _\n"
-      "_ _ _ _ _ _ _ _\n" ;
-
-    // Refactor? Move finding of coordinate-to-string-position into function
-    constexpr size_t row_offset = 16; // move past " _ _ _ _ _ _ _\n", already on _
-    constexpr size_t col_offset = 2;  // "_ "
-    print_board[m_white.first * row_offset  +  m_white.second * col_offset] = 'W';
-    print_board[m_black.first * row_offset  +  m_black.second * col_offset] = 'B';
-
-    return print_board;
-  }
+  operator std::string() const;
 
   bool can_attack() const
   {
