@@ -5,16 +5,18 @@
 namespace queen_attack
 {
 
+typedef std::pair<int, int> coordinate;
+
 class chess_board
 {
-  const std::pair<int, int> m_black = std::make_pair(7, 3);
-  const std::pair<int, int> m_white = std::make_pair(0, 3);
+  const coordinate m_black = std::make_pair(7, 3);
+  const coordinate m_white = std::make_pair(0, 3);
 
 public:
   chess_board() {}
 
-  std::pair<int, int> black() const { return m_black; }
-  std::pair<int, int> white() const { return m_white; }
+  coordinate black() const { return m_black; }
+  coordinate white() const { return m_white; }
 
 };
 
