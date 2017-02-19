@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdexcept>
 #include <utility>
 
 namespace queen_attack
@@ -14,7 +15,11 @@ class chess_board
 
 public:
   chess_board() {}
-  chess_board(coordinate white, coordinate black) : m_white(white), m_black(black) {}
+  chess_board(coordinate white, coordinate black) : m_white(white), m_black(black)
+  {
+    if (m_white == m_black)
+      throw std::domain_error("Cannot initialize white and black queens in the same coordinate.");
+  }
 
   coordinate black() const { return m_black; }
   coordinate white() const { return m_white; }
