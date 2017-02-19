@@ -31,6 +31,7 @@ private:
   const coordinate m_white = std::make_pair(0, 3);
 
   int column(const coordinate& coord) const {return coord.second;}
+  int row(const coordinate& coord) const {return coord.first;}
   bool same_column() const { return column(m_white) == column(m_black); }
 
 };
