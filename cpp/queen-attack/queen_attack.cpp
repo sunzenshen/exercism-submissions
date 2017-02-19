@@ -26,6 +26,6 @@ chess_board::operator std::string() const
 
 bool chess_board::can_attack() const
 {
-  return same_column();
+  return same_column() || same_row();
 }
 
