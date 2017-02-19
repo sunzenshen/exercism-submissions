@@ -27,11 +27,9 @@ public:
 
   operator std::string() const;
 
-  bool can_attack() const
-  {
-    return false;
-  }
+  bool can_attack() const;
 
 };
 
 } // end namespace queen_attack
+

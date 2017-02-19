@@ -24,3 +24,7 @@ chess_board::operator std::string() const
   return print_board;
 }
 
+bool chess_board::can_attack() const
+{
+  return false;
+}
