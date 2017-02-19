@@ -16,23 +16,29 @@ namespace tt_detail
 
 // teach Boost.Test how to print std::vector<T>
 template <typename T>
-inline std::ostream &operator<<(std::ostream &str, std::vector<T> const &items)
+struct print_log_value< ::std::vector<T> >
 {
-    str << '[';
-    bool first = true;
-    for (auto const& element : items) {
-        str << (!first ? "," : "") << element;
-        first = false;
+    inline void operator()(::std::ostream &str, ::std::vector<T> const &items)
+    {
+        str << '[';
+        bool first = true;
+        for (auto const& element : items) {
+            str << (!first ? "," : "") << element;
+            first = false;
+        }
+        str << ']';
     }
-    return str << ']';
-}
+};
 
 // teach Boost.Test how to print std::pair<K,V>
 template <typename K, typename V>
-inline std::ostream &operator<<(std::ostream &str, std::pair<K, V> const& item)
+struct print_log_value< ::std::pair<K, V> >
 {
-    return str << '<' << item.first << ',' << item.second << '>';
-}
+    inline void operator()(::std::ostream &str, ::std::pair<K, V> const& item)
+    {
+      str << '<' << item.first << ',' << item.second << '>';
+    }
+};
 
 } // namespace tt_detail
 } // namespace test_tools
