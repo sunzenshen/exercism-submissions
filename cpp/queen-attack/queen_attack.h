@@ -14,6 +14,7 @@ class chess_board
 
 public:
   chess_board() {}
+  chess_board(coordinate white, coordinate black) : m_white(white), m_black(black) {}
 
   coordinate black() const { return m_black; }
   coordinate white() const { return m_white; }
