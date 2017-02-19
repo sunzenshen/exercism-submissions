@@ -26,5 +26,10 @@ chess_board::operator std::string() const
 
 bool chess_board::can_attack() const
 {
-  return false;
+  return same_column();
+}
+
+bool chess_board::same_column() const
+{
+  return m_white.second == m_black.second;
 }

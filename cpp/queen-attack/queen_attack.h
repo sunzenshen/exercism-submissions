@@ -30,6 +30,8 @@ private:
   const coordinate m_black = std::make_pair(7, 3);
   const coordinate m_white = std::make_pair(0, 3);
 
+  bool same_column() const;
+
 };
 
 } // end namespace queen_attack
