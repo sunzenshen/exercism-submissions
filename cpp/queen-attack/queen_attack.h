@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdexcept>
+#include <string>
 #include <utility>
 
 namespace queen_attack
@@ -23,6 +24,21 @@ public:
 
   coordinate black() const { return m_black; }
   coordinate white() const { return m_white; }
+
+  operator std::string() const
+  {
+    const std::string default_board =
+      "_ _ _ _ _ _ _ _\n"
+      "_ _ _ _ _ _ _ _\n"
+      "_ _ _ _ W _ _ _\n"
+      "_ _ _ _ _ _ _ _\n"
+      "_ _ _ _ _ _ _ _\n"
+      "_ _ _ _ _ _ _ _\n"
+      "_ _ _ _ _ _ B _\n"
+      "_ _ _ _ _ _ _ _\n" ;
+
+    return default_board;
+  }
 
 };
 
