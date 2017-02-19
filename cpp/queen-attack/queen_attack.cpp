@@ -1,8 +1,15 @@
 #include "queen_attack.h"
-#include "stdlib.h"
+#include <stdlib.h>
+#include <stdexcept>
 
 using namespace std;
 using namespace queen_attack;
+
+chess_board::chess_board(coordinate white, coordinate black) : m_white(white), m_black(black)
+{
+  if (m_white == m_black)
+    throw std::domain_error("Cannot initialize white and black queens in the same coordinate.");
+}
 
 chess_board::operator std::string() const
 {
