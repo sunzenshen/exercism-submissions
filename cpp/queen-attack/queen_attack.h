@@ -34,6 +34,7 @@ private:
   int row(const coordinate& coord) const {return coord.first;}
   bool same_column() const { return column(m_white) == column(m_black); }
   bool same_row() const { return row(m_white) == row(m_black); }
+  bool diagonal() const;
 
 };
 

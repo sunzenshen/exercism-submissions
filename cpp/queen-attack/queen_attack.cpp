@@ -1,4 +1,5 @@
 #include "queen_attack.h"
+#include "stdlib.h"
 
 using namespace std;
 using namespace queen_attack;
@@ -26,6 +27,13 @@ chess_board::operator std::string() const
 
 bool chess_board::can_attack() const
 {
-  return same_column() || same_row();
+  return same_column() || same_row() || diagonal();
+}
+
+bool chess_board::diagonal() const
+{
+  const auto row_offset = abs(row(m_white) - row(m_black));
+  const auto column_offset = abs(column(m_white) - column(m_black));
+  return row_offset == column_offset;
 }
 
