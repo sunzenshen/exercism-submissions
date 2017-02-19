@@ -46,6 +46,11 @@ public:
     return print_board;
   }
 
+  bool can_attack() const
+  {
+    return false;
+  }
+
 };
 
 } // end namespace queen_attack
