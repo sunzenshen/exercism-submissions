@@ -5,20 +5,20 @@
 
 namespace
 {
-  int digitHexToDec(const char hex)
+  int hexitToDigit(const char hexit)
   {
-    if (isalpha(hex))
+    if (isalpha(hexit))
     {
-      const auto alphaOffset = tolower(hex) - 'a' + 10;
+      const auto alphaOffset = tolower(hexit) - 'a' + 10;
       if (alphaOffset > 16)
       {
         throw std::invalid_argument("A hex digit to convert is an alpha that's outside the range A-F.");
       }
       return alphaOffset;
     }
-    else if (isdigit(hex))
+    else if (isdigit(hexit))
     {
-      return hex - '0';
+      return hexit - '0';
     }
     else
     {
@@ -34,7 +34,7 @@ int hexadecimal::convert(const std::string& hex)
   try
   {
     return std::accumulate(hex.begin(), hex.end(), 0,
-                           [](int acc, int digit) { return digitHexToDec(digit)  +  acc * 16; });
+                           [](int acc, int hexit) { return hexitToDigit(hexit)  +  acc * 16; });
   }
   catch (std::invalid_argument)
   {
