@@ -4,7 +4,7 @@
 
 namespace hexadecimal
 {
-  int convert(std::string hex);
+  int convert(const std::string& hex);
 
 } // end namespace hexadecimal
 

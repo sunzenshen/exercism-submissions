@@ -7,11 +7,10 @@ using namespace std;
 
 namespace
 {
-  int digitHexToDec(char hex)
+  int digitHexToDec(const char hex)
   {
     if (isalpha(hex))
     {
-      // process alpha characters
       const auto alphaOffset = tolower(hex) - 'a' + 10;
       if (alphaOffset > 16)
       {
@@ -32,12 +31,12 @@ namespace
 
 } // end anonymous namespace
 
-int hexadecimal::convert(std::string hex)
+int hexadecimal::convert(const std::string& hex)
 {
-  int acc(0);
-  auto hexPlace = hex.length() - 1;
   try
   {
+    int acc(0);
+    auto hexPlace = hex.length() - 1;
     for (auto digit : hex)
     {
       acc += digitHexToDec(digit) * pow(16, hexPlace);
