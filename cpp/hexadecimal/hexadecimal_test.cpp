@@ -37,7 +37,6 @@ BOOST_AUTO_TEST_CASE(invalid_hex_is_decimal_0)
     BOOST_REQUIRE_EQUAL(0, hexadecimal::convert("carrot"));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(black)
 {
     BOOST_REQUIRE_EQUAL(0x000000, hexadecimal::convert("000000"));
@@ -52,4 +51,3 @@ BOOST_AUTO_TEST_CASE(yellow)
 {
     BOOST_REQUIRE_EQUAL(0xffff00, hexadecimal::convert("ffff00"));
 }
-#endif
