@@ -2,8 +2,6 @@
 #include <cctype>
 #include <stdexcept>
 
-using namespace std;
-
 namespace
 {
   int digitHexToDec(const char hex)
@@ -13,7 +11,7 @@ namespace
       const auto alphaOffset = tolower(hex) - 'a' + 10;
       if (alphaOffset > 16)
       {
-        throw domain_error("A hex digit to convert is an alpha that's outside the range A-F.");
+        throw std::invalid_argument("A hex digit to convert is an alpha that's outside the range A-F.");
       }
       return alphaOffset;
     }
@@ -23,7 +21,7 @@ namespace
     }
     else
     {
-      throw domain_error("A hex digit to convert is not alpha/numeric.");
+      throw std::invalid_argument("A hex digit to convert is not alpha/numeric.");
     }
 
   }
@@ -43,7 +41,7 @@ int hexadecimal::convert(const std::string& hex)
     }
     return acc;
   }
-  catch (domain_error)
+  catch (std::invalid_argument)
   {
     return 0;
   }
