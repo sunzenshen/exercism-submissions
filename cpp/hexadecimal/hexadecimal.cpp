@@ -1,6 +1,5 @@
 #include "hexadecimal.h"
 #include <cctype>
-#include <cmath>
 #include <stdexcept>
 
 using namespace std;
@@ -39,7 +38,7 @@ int hexadecimal::convert(const std::string& hex)
     auto hexPlace = hex.length() - 1;
     for (auto digit : hex)
     {
-      acc += digitHexToDec(digit) * pow(16, hexPlace);
+      acc = digitHexToDec(digit)  +  acc * 16;
       --hexPlace;
     }
     return acc;
