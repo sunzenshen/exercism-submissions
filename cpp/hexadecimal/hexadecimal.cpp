@@ -5,12 +5,12 @@
 
 namespace
 {
-  int hexitToDigit(const char hexit)
+  size_t hexitToDigit(const char hexit)
   {
     if (isalpha(hexit))
     {
-      const auto alphaOffset = tolower(hexit) - 'a' + 10;
-      if (alphaOffset > 16)
+      const auto alphaOffset = tolower(hexit) - 'a' + 10UL;
+      if (alphaOffset > 16UL)
       {
         throw std::invalid_argument("A hex digit to convert is an alpha that's outside the range A-F.");
       }
@@ -29,15 +29,15 @@ namespace
 
 } // end anonymous namespace
 
-int hexadecimal::convert(const std::string& hex)
+size_t hexadecimal::convert(const std::string& hex)
 {
   try
   {
-    return std::accumulate(hex.begin(), hex.end(), 0,
-                           [](int acc, int hexit) { return hexitToDigit(hexit)  +  acc * 16; });
+    return std::accumulate(hex.begin(), hex.end(), 0UL,
+                           [](size_t acc, size_t hexit) { return hexitToDigit(hexit)  +  acc * 16UL; });
   }
   catch (std::invalid_argument)
   {
-    return 0;
+    return 0UL;
   }
 }
